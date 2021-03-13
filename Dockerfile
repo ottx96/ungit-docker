@@ -9,6 +9,7 @@ RUN git clone https://github.com/FredrikNoren/ungit.git /ungit \
 EXPOSE 8448
 
 COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 
 #ENTRYPOINT ["/ungit/bin/ungit"]
 ENTRYPOINT ["/entrypoint.sh"]
